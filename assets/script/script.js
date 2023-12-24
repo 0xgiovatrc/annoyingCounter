@@ -24,13 +24,17 @@ document.querySelector(".target-number-generator").addEventListener("click", fun
             <p>Target Number: </p>
             <p class="target-number">${targetNumber1}</p>
         `;
-    let timeCentiSeconds = 600;
+    let timeCentiSeconds = 1000;
     const timerCountDown = setInterval(() => {
         timeCentiSeconds--;
         displayTime(timeCentiSeconds);
-        if (timeCentiSeconds === 0) {
+        if (timeCentiSeconds === 0 && targetNumber1 === myNumber) {
             clearInterval(timerCountDown);
-        }}, (1000 / 60));
+            alert("You Win!");
+        } else if (timeCentiSeconds === 0 && targetNumber1 != myNumber) {
+            clearInterval(timerCountDown);
+            alert("You Lose.");
+        }}, (1000 / 100));
 });
 
 function getRandomInt(min, max) {
@@ -40,7 +44,7 @@ function getRandomInt(min, max) {
 }
 
 function displayTime(centiSeconds) {
-    const sec = Math.floor(centiSeconds / 60);
-    const centiSec = Math.floor(centiSeconds % 60);
+    const sec = Math.floor(centiSeconds / 100);
+    const centiSec = Math.floor(centiSeconds % 100);
     timer.innerHTML = `${sec < 10 ? "0" : ""}${sec}:${centiSec < 10 ? "0" : ""}${centiSec}`;
 }
