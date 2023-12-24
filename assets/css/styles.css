@@ -10,11 +10,27 @@ body{
     font-family: "Prompt", sans-serif;
     background-color: rgb(7,7,7);
     color: #FAF9F6;
+    height: 100lvh;
+    width: 100lvw;
 }
 
-div{
+header, div{
+    margin: 0 auto;
     margin-top: 20px;
     font-size: 25px;
+}
+
+.title{
+    font-size: 35px;
+}
+
+.title-container,
+.level-container,
+.timer-container,
+.target-number-container,
+.counter-container,
+.inputs-container{
+    text-align: center;
 }
 
 button{
