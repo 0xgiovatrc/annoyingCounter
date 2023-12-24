@@ -10,8 +10,8 @@ body{
     font-family: "Prompt", sans-serif;
     background-color: rgb(7,7,7);
     color: #FAF9F6;
-    height: 100lvh;
-    width: 100lvw;
+    height: 100dvh;
+    width: 98vw;
 }
 
 header, div{
