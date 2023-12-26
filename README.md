@@ -4,7 +4,7 @@ Welcome to the *Annoying Counter Game*! Embrace the challenge of simplicity and 
 
 <img src="assets/img/demo-annoyingCounter.png">
 
-<a href="https://0xgiovatrc.github.io/annoyingCounter/" target="_blank">Open the Annoying Counter</a>
+<a href="https://0xgiovatrc.github.io/annoyingCounter/" target="_blank">➡️ PLAY THE ANNOYING COUNTER</a>
 
 ## Gameplay
 
