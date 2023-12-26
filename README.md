@@ -7,7 +7,7 @@
 Welcome to the Annoying Counter Game! Embrace the challenge of simplicity and test your quick clicking skills. Can you conquer the Annoying Counter and win the marvelous prize?
 
 ## Gameplay
-1. Generate Level:
+### 1. Generate Level:
     Click on the "GENERATE LEVEL" button to kick off a new level.
 
 2. Make My Number Equal to Target Number:
