@@ -1,6 +1,6 @@
-# Annoying Counter Game
+# Annoying Counter
 
-Welcome to the *Annoying Counter Game*! Embrace the challenge of simplicity and test your quick clicking skills. The game is designed to be both frustrating and entertaining—can you conquer the *Annoying Counter*?
+Welcome to the *Annoying Counter* Game! Embrace the challenge of simplicity and test your quick-clicking skills.
 
 <a href="https://0xgiovatrc.github.io/annoyingCounter/"><img src="assets/img/demo-annoyingCounter.png"></a>
 
@@ -18,7 +18,7 @@ Welcome to the *Annoying Counter Game*! Embrace the challenge of simplicity and 
    - Complete the level swiftly. Each level has a time limit to keep you on your toes.
 
 4. **Complete All the Levels:**
-   - Your ultimate challenge is to successfully conquer all the levels in a row to emerge victorious.
+   - Your ultimate challenge is to successfully conquer all the levels in a row to emerge victorious and get the **Marvelous Final Prize**.
 
 5. **Restart on Failure:**
    - Fail a level? You'll restart from the beginning. Persistence is key if you want to overcome the *Annoying Counter*!
