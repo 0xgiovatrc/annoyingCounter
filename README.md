@@ -2,9 +2,9 @@
 
 Welcome to the *Annoying Counter Game*! Embrace the challenge of simplicity and test your quick clicking skills. The game is designed to be both frustrating and entertaining—can you conquer the *Annoying Counter*?
 
-<img src="assets/img/demo-annoyingCounter.png">
+<a href="https://0xgiovatrc.github.io/annoyingCounter/"><img src="assets/img/demo-annoyingCounter.png"></a>
 
-<a href="https://0xgiovatrc.github.io/annoyingCounter/" target="_blank">➡️ PLAY THE ANNOYING COUNTER</a>
+<a href="https://0xgiovatrc.github.io/annoyingCounter/">➡️ PLAY THE ANNOYING COUNTER</a>
 
 ## Gameplay
 
