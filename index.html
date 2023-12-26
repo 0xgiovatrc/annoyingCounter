@@ -8,6 +8,7 @@
 </head>
 <body>
 
+    <!-- RULES POPUP -->
     <div class="rules-container display-none">
         <div class="rules-content">
             <p class="intro">Hey lost sheep, are you ready to play? 🐑</p>
@@ -15,7 +16,7 @@
                 <p>You have to follow really simple rules:</p>
                 <ol>
                     <li>Click on <span>GENERATE LEVEL</span> to start</li>
-                    <li>Make <span>MY NUMBER</span> equal to <span>TARGET NUMBER</span></li>
+                    <li>Make <span>MY NUMBER</span> equal to <span>TARGET NUMBER</span> using <span>+/-</span></li>
                     <li>Wait for the <span>TIMER</span> to run out</li>
                     <li>Complete ALL THE LEVELS in a row to win</li>
                     <li>If you lose the level, you will restart from scratch</li>
@@ -28,13 +29,13 @@
         </div>
     </div>
 
+    <!-- IN-GAME INTERFACE -->
     <div class="game-interface">
         <header class="container title-container">
             <h1 class="title">Annoying Counter</h1>
-            <h2 class="level">Level 1 / 5</h2>
+            <h2 class="level">🟨⬜⬜⬜⬜</h2>
             <button id="show-rules">Show Rules</button>
         </header>
-
         <section class="game-section">
             <div class="container timer-container">
                 <p>TIMER</p>
@@ -54,7 +55,6 @@
                 </div>
             </div>
         </section>
-
         <footer>
             <div class="footer-container">
                 <div class="footer-content">
@@ -64,6 +64,7 @@
         </footer>
     </div>
 
+    <!-- SCRIPT LINKING -->
     <script src="assets/script/script.js"></script>
 
 </body>

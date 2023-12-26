@@ -36,7 +36,7 @@ minusButton.addEventListener("click", function() {
     return
 });
 
-// LEVEL 1
+// LEVELS
 generator.addEventListener("click", function() {
     minusButton.disabled = false;
     plusButton.disabled = false;
@@ -55,7 +55,7 @@ generator.addEventListener("click", function() {
             clearInterval(timerCountDown);
             minusButton.disabled = true;
             plusButton.disabled = true;
-            level.innerHTML = "Level 2 / 5";
+            level.innerHTML = "🟩🟨⬜⬜⬜";
             targetNumbCont.innerHTML = `
                 <p>TARGET NUMBER</p>
                 <button class="target-number-generator-2">START LEVEL 2</button>
@@ -85,7 +85,7 @@ generator.addEventListener("click", function() {
                         clearInterval(timerCountDown);
                         minusButton.disabled = true;
                         plusButton.disabled = true;
-                        level.innerHTML = "Level 3 / 5";
+                        level.innerHTML = "🟩🟩🟨⬜⬜";
                         targetNumbCont.innerHTML = `
                             <p>TARGET NUMBER</p>
                             <button class="target-number-generator-3">START LEVEL 3</button>
@@ -115,7 +115,7 @@ generator.addEventListener("click", function() {
                                     clearInterval(timerCountDown);
                                     minusButton.disabled = true;
                                     plusButton.disabled = true;
-                                    level.innerHTML = "Level 4 / 5";
+                                    level.innerHTML = "🟩🟩🟩🟨⬜";
                                     targetNumbCont.innerHTML = `
                                         <p>TARGET NUMBER</p>
                                         <button class="target-number-generator-4">START LEVEL 4</button>
@@ -145,7 +145,7 @@ generator.addEventListener("click", function() {
                                                 clearInterval(timerCountDown);
                                                 minusButton.disabled = true;
                                                 plusButton.disabled = true;
-                                                level.innerHTML = "Level 5 / 5";
+                                                level.innerHTML = "🟩🟩🟩🟩🟨";
                                                 targetNumbCont.innerHTML = `
                                                     <p>TARGET NUMBER</p>
                                                     <button class="target-number-generator-5">START LEVEL 5</button>
@@ -175,10 +175,10 @@ generator.addEventListener("click", function() {
                                                             minusButton.disabled = true;
                                                             plusButton.disabled = true;
                                                             clearInterval(timerCountDown);
-                                                            level.innerHTML = "Hai vinto!";
+                                                            level.innerHTML = "YOU WON!";
                                                             targetNumbCont.innerHTML = `
                                                                 <p>TARGET NUMBER</p>
-                                                                <button class="target-number-generator">GENERATE</button>
+                                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button>REDEEM YOUR PRIZE</button></a>
                                                                 <p class="target-number"></p>
                                                             `;
                                                             myNumber = 0;
