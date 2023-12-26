@@ -14,7 +14,7 @@ body{
 
 .game-interface{
     /* border: 3px solid rosybrown; */
-    height: 100vh;
+    height: 100svh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,6 +217,15 @@ button{
 
     #play{
         margin-top: 5px;
+    }
+
+    .rules-explanation > p{
+        display: none;
+    }
+
+    .footer-container{
+        position: relative;
+        bottom: 0;
     }
 
 }
