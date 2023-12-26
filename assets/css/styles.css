@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
 *{
     margin: 0;
@@ -7,42 +7,216 @@
 }
 
 body{
-    font-family: "Prompt", sans-serif;
+    font-family: "Share Tech Mono", sans-serif;
     background-color: rgb(7,7,7);
     color: #FAF9F6;
-    height: 100svh;
-    width: 98vw;
 }
 
-header, div{
-    margin: 0 auto;
-    margin-top: 20px;
-    font-size: 25px;
+.game-interface{
+    /* border: 3px solid rosybrown; */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .title{
-    font-size: 35px;
+    font-size: 40px;
+    margin-bottom: 8px;
+    color: rgb(170, 255, 0);
 }
 
-.title-container,
-.level-container,
-.timer-container,
-.target-number-container,
-.counter-container,
-.inputs-container{
+.level{
+    font-size: 33px;
+}
+
+.game-section{
+    width: 400px;
+    padding-bottom: 0;
+    border: 2px solid rgb(170, 255, 0);
+    border-radius: 7px;
+    background-color: rgb(5, 14, 5);
+}
+
+.container{
+    padding: 20px;
+    border-bottom: 2px solid rgb(170, 255, 0);
     text-align: center;
+    font-size: 30px;
+}
+
+.container:last-child{
+    border: none;
+}
+
+.title-container{
+    border: none;
+    margin-right: 20px;
+}
+
+.timer,
+.target-number,
+.counter{
+    font-size: 35px;
+    margin-top: 5px;
+}
+
+.footer-container{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.rules-container{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 1;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rules-content{
+    background-color: rgba(7,7,7, 1);
+    border: 3px solid rgb(14, 41, 14);
+    border-radius: 8px;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro{
+    text-align: center;
+    font-size: 25px;
+}
+
+.rules-explanation{
+    background-color: rgb(14, 41, 14);
+    border-radius: 8px;
+    padding: 20px;
+    padding-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    width: 100%;
+}
+
+span{
+    color: rgb(170, 255, 0);
+}
+
+.play-button-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 button{
+    font: inherit;
     border: none;
     border-radius: 5px;
     font-size: 30px;
     padding: 5px 10px;
+    margin-top: 15px;
     cursor: pointer;
 }
 
-.plus-button,
-.minus-button{
+#plus,
+#minus{
     font-size: 60px;
     width: 60px;
+}
+
+#show-rules{
+    padding: 0;
+    background-color: transparent;
+    color: rgb(170, 255, 0);
+}
+
+#play::before{
+    content: "I DON'T FEAR YOU, ";
+}
+
+#play{
+    background-color: rgb(170, 255, 0);
+    color: rgb(14, 41, 14);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#play:hover{
+    background-color: rgb(202, 255, 97);
+}
+
+.display-none{
+    display: none;
+}
+
+#show-rules{
+    margin-top: 0;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 820px) {
+
+    .game-interface{
+        flex-direction: column;
+    }
+
+    .title-container{
+        margin-top: -25px;
+        margin-right: 0;
+        margin-bottom: -10px;
+    }
+
+    .title{
+        font-size: 37px;
+    }
+
+    .level{
+        font-size: 30px;
+    }
+
+    .game-section{
+        width: 90%;
+    }
+
+    .rules-content{
+        padding: 15px;
+        border: none;
+        height: 100%;
+    }
+
+    .footer-container{
+        bottom: 13px;
+        font-size: 12px;
+    }
+
+    .play-button-container > p{
+        display: none;
+    }
+
+    #play::before{
+        content: none;
+    }
+
+    #play{
+        margin-top: 5px;
+    }
+
 }

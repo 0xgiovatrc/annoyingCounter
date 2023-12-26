@@ -1,11 +1,26 @@
+const showRules = document.getElementById("show-rules");
+const playButton = document.getElementById("play");
 const timer = document.querySelector(".timer");
 const targetNumbCont = document.querySelector(".target-number-container");
 const level = document.querySelector(".level");
 const counter = document.querySelector(".counter");
-let generator = document.querySelector(".target-number-generator");
+const minusButton = document.getElementById("minus");
+const plusButton = document.getElementById("plus");
+const generator = document.querySelector(".target-number-generator");
 let myNumber = 0;
 
-document.querySelector(".plus-button").addEventListener("click", function() {
+minusButton.disabled = true;
+plusButton.disabled = true;
+
+showRules.addEventListener("click", function() {
+    document.querySelector(".rules-container").classList.remove("display-none");
+})
+
+playButton.addEventListener("click", function() {
+    document.querySelector(".rules-container").classList.add("display-none");
+})
+
+plusButton.addEventListener("click", function() {
     if (myNumber >= 0) {
         myNumber++;
         counter.innerHTML = myNumber;
@@ -13,7 +28,7 @@ document.querySelector(".plus-button").addEventListener("click", function() {
     return
 });
 
-document.querySelector(".minus-button").addEventListener("click", function() {
+minusButton.addEventListener("click", function() {
     if (myNumber > 0) {
         myNumber--;
         counter.innerHTML = myNumber;
@@ -23,9 +38,11 @@ document.querySelector(".minus-button").addEventListener("click", function() {
 
 // LEVEL 1
 generator.addEventListener("click", function() {
+    minusButton.disabled = false;
+    plusButton.disabled = false;
     const targetNumber1 = getRandomInt(15, 21);
     targetNumbCont.innerHTML = `
-        <p>Target Number: </p>
+        <p>TARGET NUMBER</p>
         <p class="target-number">${targetNumber1}</p>
     `;
     let timeCentiSeconds = 1000;
@@ -36,10 +53,12 @@ generator.addEventListener("click", function() {
         // WIN LEVEL 1
         if (timeCentiSeconds === 0 && targetNumber1 === myNumber) {
             clearInterval(timerCountDown);
+            minusButton.disabled = true;
+            plusButton.disabled = true;
             level.innerHTML = "Level 2 / 5";
             targetNumbCont.innerHTML = `
-                <p>Target Number: </p>
-                <button class="target-number-generator-2">Generate</button>
+                <p>TARGET NUMBER</p>
+                <button class="target-number-generator-2">START LEVEL 2</button>
                 <p class="target-number"></p>
             `;
             const generator2 = document.querySelector(".target-number-generator-2");
@@ -49,9 +68,11 @@ generator.addEventListener("click", function() {
 
             // LEVEL 2
             generator2.addEventListener("click", function() {
+                minusButton.disabled = false;
+                plusButton.disabled = false;
                 const targetNumber2 = getRandomInt(42, 49);
                 targetNumbCont.innerHTML = `
-                    <p>Target Number: </p>
+                    <p>TARGET NUMBER</p>
                     <p class="target-number">${targetNumber2}</p>
                 `;
                 timeCentiSeconds = 1000;
@@ -62,10 +83,12 @@ generator.addEventListener("click", function() {
                     // WIN LEVEL 2
                     if (timeCentiSeconds === 0 && targetNumber2 === myNumber) {
                         clearInterval(timerCountDown);
+                        minusButton.disabled = true;
+                        plusButton.disabled = true;
                         level.innerHTML = "Level 3 / 5";
                         targetNumbCont.innerHTML = `
-                            <p>Target Number: </p>
-                            <button class="target-number-generator-3">Generate</button>
+                            <p>TARGET NUMBER</p>
+                            <button class="target-number-generator-3">START LEVEL 3</button>
                             <p class="target-number"></p>
                         `;
                         const generator3 = document.querySelector(".target-number-generator-3");
@@ -75,9 +98,11 @@ generator.addEventListener("click", function() {
 
                         // LEVEL 3
                         generator3.addEventListener("click", function() {
-                            const targetNumber3 = getRandomInt(63, 69);
+                            minusButton.disabled = false;
+                            plusButton.disabled = false;
+                            const targetNumber3 = getRandomInt(75, 79);
                             targetNumbCont.innerHTML = `
-                                <p>Target Number: </p>
+                                <p>TARGET NUMBER</p>
                                 <p class="target-number">${targetNumber3}</p>
                             `;
                             timeCentiSeconds = 1200;
@@ -88,10 +113,12 @@ generator.addEventListener("click", function() {
                                 // WIN LEVEL 3
                                 if (timeCentiSeconds === 0 && targetNumber3 === myNumber) {
                                     clearInterval(timerCountDown);
+                                    minusButton.disabled = true;
+                                    plusButton.disabled = true;
                                     level.innerHTML = "Level 4 / 5";
                                     targetNumbCont.innerHTML = `
-                                        <p>Target Number: </p>
-                                        <button class="target-number-generator-4">Generate</button>
+                                        <p>TARGET NUMBER</p>
+                                        <button class="target-number-generator-4">START LEVEL 4</button>
                                         <p class="target-number"></p>
                                     `;
                                     const generator4 = document.querySelector(".target-number-generator-4");
@@ -101,9 +128,11 @@ generator.addEventListener("click", function() {
 
                                     // LEVEL 4
                                     generator4.addEventListener("click", function() {
-                                        const targetNumber4 = getRandomInt(81, 88);
+                                        minusButton.disabled = false;
+                                        plusButton.disabled = false;
+                                        const targetNumber4 = getRandomInt(110, 123);
                                         targetNumbCont.innerHTML = `
-                                            <p>Target Number: </p>
+                                            <p>TARGET NUMBER</p>
                                             <p class="target-number">${targetNumber4}</p>
                                         `;
                                         timeCentiSeconds = 1400;
@@ -114,10 +143,12 @@ generator.addEventListener("click", function() {
                                             // WIN LEVEL 4
                                             if (timeCentiSeconds === 0 && targetNumber4 === myNumber) {
                                                 clearInterval(timerCountDown);
+                                                minusButton.disabled = true;
+                                                plusButton.disabled = true;
                                                 level.innerHTML = "Level 5 / 5";
                                                 targetNumbCont.innerHTML = `
-                                                    <p>Target Number: </p>
-                                                    <button class="target-number-generator-5">Generate</button>
+                                                    <p>TARGET NUMBER</p>
+                                                    <button class="target-number-generator-5">START LEVEL 5</button>
                                                     <p class="target-number"></p>
                                                 `;
                                                 const generator5 = document.querySelector(".target-number-generator-5");
@@ -125,11 +156,13 @@ generator.addEventListener("click", function() {
                                                 counter.innerHTML = myNumber;
                                                 timer.innerHTML = "--:--";
 
-                                                // LEVEL 5 ** IMPOSSIBLE **
+                                                // LEVEL 5
                                                 generator5.addEventListener("click", function() {
-                                                    const targetNumber5 = getRandomInt(115, 123);
+                                                    minusButton.disabled = false;
+                                                    plusButton.disabled = false;
+                                                    const targetNumber5 = getRandomInt(155, 171);
                                                     targetNumbCont.innerHTML = `
-                                                        <p>Target Number: </p>
+                                                        <p>TARGET NUMBER</p>
                                                         <p class="target-number">${targetNumber5}</p>
                                                     `;
                                                     timeCentiSeconds = 1500;
@@ -139,11 +172,13 @@ generator.addEventListener("click", function() {
                                                 
                                                         // WIN LEVEL 5
                                                         if (timeCentiSeconds === 0 && targetNumber5 === myNumber) {
+                                                            minusButton.disabled = true;
+                                                            plusButton.disabled = true;
                                                             clearInterval(timerCountDown);
-                                                            level.innerHTML = "Hai vinto... niente... ma hai vinto :)";
+                                                            level.innerHTML = "Hai vinto!";
                                                             targetNumbCont.innerHTML = `
-                                                                <p>Target Number: </p>
-                                                                <button class="target-number-generator">Generate</button>
+                                                                <p>TARGET NUMBER</p>
+                                                                <button class="target-number-generator">GENERATE</button>
                                                                 <p class="target-number"></p>
                                                             `;
                                                             myNumber = 0;
@@ -153,13 +188,13 @@ generator.addEventListener("click", function() {
                                                         // LOSE LEVEL 5
                                                         } else if (timeCentiSeconds === 0 && targetNumber5 != myNumber) {
                                                             location.reload();
-                                                        }}, (1200 / 100));
+                                                        }}, (1500 / 100));
                                                     });
                                     
                                             // LOSE LEVEL 4
                                             } else if (timeCentiSeconds === 0 && targetNumber4 != myNumber) {
                                                 location.reload();
-                                            }}, (1200 / 100));
+                                            }}, (1400 / 100));
                                         });
                         
                                 // LOSE LEVEL 3

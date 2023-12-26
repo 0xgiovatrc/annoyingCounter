@@ -7,33 +7,66 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header class="title-container">
-        <h1 class="title">Annoying Counter</h1>
-    </header>
 
-    <div class="containter">
-        <div class="level-container">
-            <h2 class="level">Level 1 / 5</h2>
-        </div>
-        <div class="timer-container">
-            <p>Seconds Remaining: </p>
-            <p class="timer">--:--</p>
-        </div>
-        <div class="target-number-container">
-            <p>Target Number: </p>
-            <button class="target-number-generator">Generate</button>
-            <p class="target-number"></p>
-        </div>
-        <div class="counter-container">
-            <p>My Number: </p>
-            <p class="counter">0</p>
-        </div>
-        <div class="inputs-container">
-            <button class="minus-button">-</button>
-            <button class="plus-button">+</button>
+    <div class="rules-container display-none">
+        <div class="rules-content">
+            <p class="intro">Hey lost sheep, are you ready to play? 🐑</p>
+            <div class="rules-explanation">
+                <p>
+                    You have to follow really simple rules:
+                    <ol>
+                        <li>Click on <span>GENERATE LEVEL</span> to start</li>
+                        <li>Make <span>MY NUMBER</span> equal to <span>TARGET NUMBER</span></li>
+                        <li>Wait for the <span>TIMER</span> to run out</li>
+                        <li>Complete ALL THE LEVELS in a row to win</li>
+                        <li>If you lose the level, you will restart from scratch</li>
+                    </ol>
+                </p>
+            </div>
+            <div class="play-button-container">
+                <p>Prepare your fingers, because at the end of this thing, THEY WILL BURN! 😈</p>
+                <button id="play">LET ME PLAY!</button>
+            </div>      
         </div>
     </div>
 
+    <div class="game-interface">
+        <header class="container title-container">
+            <h1 class="title">Annoying Counter</h1>
+            <h2 class="level">Level 1 / 5</h2>
+            <button id="show-rules">Show Rules</button>
+        </header>
+
+        <section class="game-section">
+            <div class="container timer-container">
+                <p>TIMER</p>
+                <p class="timer">--:--</p>
+            </div>
+            <div class="container target-number-container">
+                <p>TARGET NUMBER</p>
+                <button class="target-number-generator">START LEVEL 1</button>
+                <p class="target-number"></p>
+            </div>
+            <div class="container counter-container">
+                <p>MY NUMBER</p>
+                <p class="counter">0</p>
+                <div class="inputs-container">
+                    <button id="minus">-</button>
+                    <button id="plus">+</button>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <a href="https://github.com/0xgiovatrc/annoyingCounter" target="_blank">Made by 0xgiovatrc // Open GitHub</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
     <script src="assets/script/script.js"></script>
+
 </body>
 </html>
