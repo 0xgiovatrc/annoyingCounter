@@ -1,5 +1,5 @@
 const showRules = document.getElementById("show-rules");
-const playButton = document.getElementById("play");
+const hideRules = document.getElementById("play");
 const timer = document.querySelector(".timer");
 const targetNumbCont = document.querySelector(".target-number-container");
 const level = document.querySelector(".level");
@@ -16,7 +16,7 @@ showRules.addEventListener("click", function() {
     document.querySelector(".rules-container").classList.remove("display-none");
 })
 
-playButton.addEventListener("click", function() {
+hideRules.addEventListener("click", function() {
     document.querySelector(".rules-container").classList.add("display-none");
 })
 
@@ -26,7 +26,7 @@ plusButton.addEventListener("click", function() {
         counter.innerHTML = myNumber;
     };
     return
-});
+})
 
 minusButton.addEventListener("click", function() {
     if (myNumber > 0) {
@@ -34,7 +34,19 @@ minusButton.addEventListener("click", function() {
         counter.innerHTML = myNumber;
     };
     return
-});
+})
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min);
+}
+
+function displayTime(centiSeconds) {
+    const sec = Math.floor(centiSeconds / 100);
+    const centiSec = Math.floor(centiSeconds % 100);
+    timer.innerHTML = `${sec < 10 ? "0" : ""}${sec}:${centiSec < 10 ? "0" : ""}${centiSec}`;
+}
 
 // LEVELS
 generator.addEventListener("click", function() {
@@ -213,15 +225,3 @@ generator.addEventListener("click", function() {
             location.reload();
         }}, (1000 / 100));
 });
-
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
-}
-
-function displayTime(centiSeconds) {
-    const sec = Math.floor(centiSeconds / 100);
-    const centiSec = Math.floor(centiSeconds % 100);
-    timer.innerHTML = `${sec < 10 ? "0" : ""}${sec}:${centiSec < 10 ? "0" : ""}${centiSec}`;
-}
