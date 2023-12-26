@@ -175,11 +175,10 @@ generator.addEventListener("click", function() {
                                                             minusButton.disabled = true;
                                                             plusButton.disabled = true;
                                                             clearInterval(timerCountDown);
-                                                            level.innerHTML = "YOU WON!";
+                                                            level.innerHTML = "🟩🟩🟩🟩🟩";
                                                             targetNumbCont.innerHTML = `
-                                                                <p>TARGET NUMBER</p>
-                                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button>REDEEM YOUR PRIZE</button></a>
-                                                                <p class="target-number"></p>
+                                                                <p>CONGRATULATIONS!</p>
+                                                                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><button>GET PRIZE 🎁</button></a>
                                                             `;
                                                             myNumber = 0;
                                                             counter.innerHTML = myNumber;
