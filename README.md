@@ -1,4 +1,4 @@
-# Annoying Counter
+# Annoying Counter // by 0xgiovatrc
 
 Welcome to the *Annoying Counter* Game! Embrace the challenge of simplicity and test your quick-clicking skills.
 
