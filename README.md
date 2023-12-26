@@ -32,7 +32,7 @@ Welcome to the *Annoying Counter* Game! Embrace the challenge of simplicity and 
 ## File Structure
 
 - `index.html`: The main HTML file providing the game's structure.
-- `style.css`: The CSS file styling the game for an enjoyable visual experience.
+- `styles.css`: The CSS file styling the game for an enjoyable visual experience.
 - `script.js`: The JavaScript file containing the *Annoying Counter*'s challenging logic.
 
 ## Acknowledgments
