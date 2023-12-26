@@ -4,7 +4,8 @@ Welcome to the *Annoying Counter* Game! Embrace the challenge of simplicity and 
 
 <a href="https://0xgiovatrc.github.io/annoyingCounter/"><img src="assets/img/demo-annoyingCounter.png"></a>
 
-<a href="https://0xgiovatrc.github.io/annoyingCounter/">➡️ PLAY THE ANNOYING COUNTER</a>
+<a href="https://0xgiovatrc.github.io/annoyingCounter/">➡️ PLAY THE ANNOYING COUNTER</a><br><br>
+<a href="https://drive.google.com/file/d/1SOA0Xhhyk5mhP6dKvUht2O7eNZWFjheV/view?usp=sharing">📜 READ PRESENTATION (Italian)</a>
 
 ## Gameplay
 
@@ -32,7 +33,7 @@ Welcome to the *Annoying Counter* Game! Embrace the challenge of simplicity and 
 ## File Structure
 
 - `index.html`: The main HTML file providing the game's structure.
-- `style.css`: The CSS file styling the game for an enjoyable visual experience.
+- `styles.css`: The CSS file styling the game for an enjoyable visual experience.
 - `script.js`: The JavaScript file containing the *Annoying Counter*'s challenging logic.
 
 ## Acknowledgments
