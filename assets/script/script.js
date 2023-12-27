@@ -1,24 +1,55 @@
+const gameSection = document.querySelector(".game-section");
 const showRules = document.getElementById("show-rules");
 const hideRules = document.getElementById("play");
 const timer = document.querySelector(".timer");
-const targetNumbCont = document.querySelector(".target-number-container");
 const level = document.querySelector(".level");
-const counter = document.querySelector(".counter");
-const minusButton = document.getElementById("minus");
-const plusButton = document.getElementById("plus");
+const targetNumbCont = document.querySelector(".target-number-container");
 const generator = document.querySelector(".target-number-generator");
 let myNumber = 0;
 
+let counterCont;
+let counterTitle;
+let counter;
+let inputsCont;
+let minusButton;
+let plusButton;
+
+function createCounter() {
+    counterCont = document.createElement("div");
+    counterCont.setAttribute("class", "container counter-container");
+    
+    counterTitle = document.createElement("p");
+    counterTitle.appendChild(document.createTextNode("MY NUMBER"));
+    
+    counter = document.createElement("p");
+    counter.setAttribute("class", "counter");
+    counter.appendChild(document.createTextNode("0"));
+
+    inputsCont = document.createElement("div");
+    inputsCont.setAttribute("class", "inputs-container");
+    
+    minusButton = document.createElement("button");
+    minusButton.setAttribute("id", "minus");
+    minusButton.appendChild(document.createTextNode("-"));
+    
+    plusButton = document.createElement("button");
+    plusButton.setAttribute("id", "plus");
+    plusButton.appendChild(document.createTextNode("+"));
+
+    gameSection.appendChild(counterCont);
+    counterCont.appendChild(counterTitle);
+    counterCont.appendChild(counter);
+    counterCont.appendChild(inputsCont);
+    inputsCont.appendChild(minusButton);
+    inputsCont.appendChild(plusButton);
+
+    return
+}
+
+createCounter();
+
 minusButton.disabled = true;
 plusButton.disabled = true;
-
-showRules.addEventListener("click", function() {
-    document.querySelector(".rules-container").classList.remove("display-none");
-})
-
-hideRules.addEventListener("click", function() {
-    document.querySelector(".rules-container").classList.add("display-none");
-})
 
 plusButton.addEventListener("click", function() {
     if (myNumber >= 0) {
@@ -34,6 +65,14 @@ minusButton.addEventListener("click", function() {
         counter.innerHTML = myNumber;
     };
     return
+})
+
+showRules.addEventListener("click", function() {
+    document.querySelector(".rules-container").classList.remove("display-none");
+})
+
+hideRules.addEventListener("click", function() {
+    document.querySelector(".rules-container").classList.add("display-none");
 })
 
 function getRandomInt(min, max) {

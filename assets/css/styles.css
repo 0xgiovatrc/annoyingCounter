@@ -142,6 +142,10 @@ button{
     width: 60px;
 }
 
+#minus{
+    margin-right: 15px;
+}
+
 #show-rules{
     padding: 0;
     background-color: transparent;
