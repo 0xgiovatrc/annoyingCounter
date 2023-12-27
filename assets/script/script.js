@@ -42,8 +42,6 @@ function createCounter() {
     counterCont.appendChild(inputsCont);
     inputsCont.appendChild(minusButton);
     inputsCont.appendChild(plusButton);
-
-    return
 }
 
 createCounter();
@@ -51,21 +49,15 @@ createCounter();
 minusButton.disabled = true;
 plusButton.disabled = true;
 
-plusButton.addEventListener("click", function() {
-    if (myNumber >= 0) {
+inputsCont.addEventListener("click", function(event) {
+    if (event.target.id === "plus" && myNumber >= 0) {
         myNumber++;
-        counter.innerHTML = myNumber;
-    };
-    return
-})
-
-minusButton.addEventListener("click", function() {
-    if (myNumber > 0) {
+    } else if (event.target.id === "minus" && myNumber > 0) {
         myNumber--;
-        counter.innerHTML = myNumber;
-    };
-    return
-})
+    }
+
+    counter.innerHTML = myNumber;
+});
 
 showRules.addEventListener("click", function() {
     document.querySelector(".rules-container").classList.remove("display-none");
