@@ -10,13 +10,13 @@ Welcome to the *Annoying Counter* Game! Embrace the challenge of simplicity and 
 ## Gameplay
 
 1. **Generate Level:**
-   - Click on the *GENERATE LEVEL* button to kick off a new level.
+   - Click on the *START LEVEL* button to kick off a new level.
 
-2. **Make My Number Equal to Target Number:**
+2. **Make My Number Equal to the Target Number:**
    - Use the provided increment (+) and decrement (-) buttons to make *MY NUMBER* equal to the *TARGET NUMBER*.
 
 3. **Wait for the Timer:**
-   - Complete the level swiftly. Each level has a time limit to keep you on your toes.
+   - Complete the level quickly and wait for the time to run out.
 
 4. **Complete All the Levels:**
    - Your ultimate challenge is to successfully conquer all the levels in a row to emerge victorious and get the **Marvelous Final Prize**.
